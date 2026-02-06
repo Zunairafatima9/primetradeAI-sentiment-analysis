@@ -78,7 +78,7 @@ pip install -r requirements.txt
    - Trader segmentation
    - Visualization & insights
 
-### Methodology Overview
+# Methodology Overview
 
 # Data Preparation
 - Converted timestamps to daily granularity
