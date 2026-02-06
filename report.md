@@ -1,7 +1,6 @@
-Analysis Summary Report: Trader Performance vs Market Sentiment
-### Methodology ###
-
-# Data Preparation & Processing
+# Analysis Summary Report: Trader Performance vs Market Sentiment
+# Methodology 
+## Data Preparation & Processing
 - Data Integration: Aligned Bitcoin Fear/Greed Index (daily sentiment) with Hyperliquid trader transaction data using timestamp synchronization
 - Feature Engineering: Created comprehensive daily metrics including:
    - Performance Metrics: Daily PnL, win rate, maximum daily loss, PnL volatility
@@ -9,7 +8,7 @@ Analysis Summary Report: Trader Performance vs Market Sentiment
    - Risk Metrics: Drawdown proxies, position sizing patterns
 - Data Cleaning: Handled missing values, standardized column names, removed duplicates, and ensured consistent timestamp formats
 
-# Analytical Approach
+## Analytical Approach
 - Comparative Analysis: Direct comparison of trader performance and behavior between Fear vs Greed market days
 - Segmentation Analysis: Identified and analyzed distinct trader groups:
    - Size-based segments (Small/Medium/Large trade sizes)
@@ -19,10 +18,9 @@ Analysis Summary Report: Trader Performance vs Market Sentiment
 - Statistical Testing: Applied t-tests to validate significance of observed differences
 - Correlation Analysis: Examined relationships between sentiment, behavior, and performance metrics
 
-### Critical Insights from Correlation and Segment Analysis ###
-
+# Critical Insights from Correlation and Segment Analysis 
 ## Insight 1: Surprising Correlation Patterns
-# Key Finding: Identical Correlations in Both Regimes
+### Key Finding: Identical Correlations in Both Regimes
 - The correlation matrices reveal a critical discovery: The relationships between PnL and other metrics are EXACTLY THE SAME for both Fear and Greed days.
 - Top Correlates with Daily PnL (identical in both regimes):
 
@@ -37,7 +35,7 @@ Analysis Summary Report: Trader Performance vs Market Sentiment
    3. Average Trade Size USD (+0.251) - Weak positive correlation:
      - Larger positions modestly correlate with higher returns
 
-# Notable Non-Findings:
+#### Notable Non-Findings:
 - Win Rate Correlation (+0.002) - Essentially zero
   - Success isn't about being "right" more often
   - Suggests risk/reward management matters more than accuracy
@@ -45,11 +43,11 @@ Analysis Summary Report: Trader Performance vs Market Sentiment
 - Long/Short Ratio (-0.075) - Slight negative correlation
   - Directional bias doesn't significantly impact performance
 
-# Critical Implication:
+### Critical Implication:
 - The relationship between behavior and performance DOES NOT CHANGE with market sentiment. This challenges the initial hypothesis that traders should adopt different strategies during Fear vs Greed periods.
 
 ## Insight 2: The "Large & Profitable" Segment Dominates
-# Breakthrough Discovery:
+### Breakthrough Discovery:
 - One trader segment dramatically outperforms all others:
 - "Large_Profitable" segment achieves $679,541 average daily PnL
 - This performance is CONSISTENT across all sentiment regimes:
@@ -59,7 +57,7 @@ Analysis Summary Report: Trader Performance vs Market Sentiment
   - Greed: $679,541
   - Extreme Greed: $679,541
 
-# What This Means:
+### What This Means:
 - Consistency Over Adaptation: The best performers don't change strategies with sentiment
 - Size + Skill Combination: Large position sizing combined with profitable execution creates sustainable edge
 - Immunity to Sentiment: Top performers are sentiment-agnostic
@@ -69,20 +67,20 @@ Analysis Summary Report: Trader Performance vs Market Sentiment
   - [Remaining segments]  (Lowest performers)
 
 ## Insight 3: Thursday Anomaly & Sentiment Convergence
-# Thursday Dominance:
+### Thursday Dominance:
 - All days show identical $321,779 average PnL across all sentiment categories
 - Thursday stands out with 6,600+ average trades (vs lower volumes other days)
 
-# Sentiment Convergence Pattern:
+### Sentiment Convergence Pattern:
 - Extreme categories perform identically to moderate ones:
 - Extreme Fear = Fear = Neutral = Greed = Extreme Greed
 - No performance gradient from extreme to moderate sentiment
 
-# Volume vs. Performance Decoupling:
+### Volume vs. Performance Decoupling:
 - Higher Thursday volume doesn't translate to higher PnL
 - Volume is a poor predictor of daily returns
 
-### Strategy Recommendations ###
+# Strategy Recommendations 
 1. TRADE SIZE ADJUSTMENT STRATEGY:
    - During Greed days: Consider increasing trade sizes by 0.0% on average
    - During Fear days: Reduce trade sizes by 0.0% to manage risk
@@ -104,7 +102,7 @@ Analysis Summary Report: Trader Performance vs Market Sentiment
    - High Volatility traders: Capitalize on Greed day momentum
    - Low Volatility traders: Use Fear days for accumulation
 
-### Final Summary ###
+# Final Summary 
 - Total analysis records: 84608
 - Total unique traders: 32
 - Date range: 1970-01-01 00:00:00 to 1970-01-01 00:00:00
@@ -112,5 +110,5 @@ Analysis Summary Report: Trader Performance vs Market Sentiment
 - Average win rate: 40.3%
 - Most frequent trading day: Thursday
 
-### Conclusion ### 
+# Conclusion 
 Market sentiment provides valuable signals for adapting trading behavior. By implementing sentiment-aware strategies with segment-specific rules, traders can improve both performance consistency and risk management. The Fear/Greed Index serves as a reliable indicator for tactical adjustments, particularly when combined with proper trader segmentation.
